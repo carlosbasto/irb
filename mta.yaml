@@ -1,0 +1,41 @@
+ID: aap
+_schema-version: '2.1'
+description: Advanced Analytics Project
+version: 0.0.1
+
+modules:
+ - name: dbaa
+   type: hdb
+   path: dbaa
+   requires:
+    - name: hdi_dbaa
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_dbaa
+   parameters:
+      config:
+         schema: dbaa
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: db
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

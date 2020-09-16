@@ -1,0 +1,5 @@
+GRAPH WORKSPACE "aap.dbaa.graph::mythology"
+EDGE TABLE "aap.dbaa.graph::data.relationships"
+SOURCE COLUMN "source" TARGET COLUMN "target" KEY COLUMN "key"
+VERTEX TABLE "aap.dbaa.graph::data.members"
+KEY COLUMN "name"

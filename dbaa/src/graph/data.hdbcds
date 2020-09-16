@@ -1,0 +1,18 @@
+namespace aap.dbaa.graph;
+
+context data{
+
+  entity members {
+    key name: hana.VARCHAR(100) not null;
+    type: hana.VARCHAR(100);
+    residence: hana.VARCHAR(100);
+  };
+
+  entity relationships {
+    key key: Integer not null;
+    source: hana.VARCHAR(100) not null;
+    target: hana.VARCHAR(100) not null;
+	type: hana.VARCHAR(100);
+  };
+
+};

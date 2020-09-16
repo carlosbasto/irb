@@ -1,0 +1,53 @@
+namespace aap.dbaa.ml;
+
+context types {
+
+	table type tt_data {
+		"id" : String(50);
+		"y"  : Double;
+		"x1" : Double;
+    	"x2" : Double;
+	};
+	
+	table type tt_results {
+		"coefficient"		: String(50);
+		"coefficientValue"	: Double;
+	};	
+	
+	table type tt_fitted {
+		"id"	 : Integer;
+		"fitted" : Double;
+	};	
+	
+	table type tt_significance {
+		"name"	: String(50);
+		"value" : Double;
+	};	
+
+	table type tt_pmmlModel {
+		"id"	: Integer;
+		"model" : String(5000);
+	};		
+	
+	table type tt_control {
+		"name"		 : String(100);
+		"intargs"	 : Integer;
+		"doubleArgs" : Double;
+		"stringArgs" : String(100);
+	};		
+
+	entity trainingSet {
+		"id" : String(50);
+		"y"  : Double;
+		"x1" : Double;
+    	"x2" : Double;
+	};
+	
+	entity controlTable  {
+		"name"		 : String(100);
+		"intargs"	 : Integer;
+		"doubleArgs" : Double;
+		"stringArgs" : String(100);
+	};	
+	
+};

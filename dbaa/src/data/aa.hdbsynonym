@@ -1,0 +1,14 @@
+{
+  "aa.houses": {
+    "target": {
+      "object": "houses",
+      "schema": "I865263"
+    }
+  },
+  "aa.houses_simple": {
+    "target": {
+      "object": "houses_simple_index",
+      "schema": "I865263"
+    }
+  }
+}
